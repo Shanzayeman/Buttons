@@ -1,0 +1,82 @@
+#one {
+    display: block;
+    border: 1px solid red;
+    width: 150px;
+    height: 50px;
+    background-color: red;
+    transition: all 0.5s;
+
+}
+
+#two {
+    color: white;
+    transition: all 0.5s;
+    position: relative;
+}
+
+#two::after {
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+
+#one:hover #two {
+    padding-right: 25px;
+    padding-top: 20px;
+}
+
+#three {
+    display: block;
+    border: 1px solid rgb(25, 172, 25);
+    width: 120px;
+    height: 50px;
+    background-color: rgb(27, 172, 34);
+    border-radius: 10px;
+    box-shadow: 0px 7px gray;
+}
+
+#three:hover {
+    background-color: greenyellow;
+}
+
+#three:active {
+    background-color: #3e8e41;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
+
+.five {
+    position: relative;
+    background-color: #04AA6D;
+    border: none;
+    font-size: 28px;
+    color: #FFFFFF;
+    padding: 20px;
+    width: 200px;
+    text-align: center;
+    transition-duration: 0.4s;
+    text-decoration: none;
+    overflow: hidden;
+}
+
+.five::after {
+    content: "";
+    background: #f1f1f1;
+    display: block;
+    position: absolute;
+    padding-top: 300%;
+    padding-left: 350%;
+    margin-left: -20px !important;
+    margin-top: -120%;
+    opacity: 0;
+    transition: all 0.8s
+}
+
+.five:active:hover {
+    padding: 0px;
+    margin: 0;
+    opacity: 1;
+    transition: 0s
+}
